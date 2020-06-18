@@ -1,0 +1,3 @@
+ana = {d1.txt=1, d2.txt=1}
+mere = {d1.txt=1, d514.txt=1}
+pere = {d514.txt=4, d2.txt=2}

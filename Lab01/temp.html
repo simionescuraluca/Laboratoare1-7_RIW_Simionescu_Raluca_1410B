@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>(Not So) Basic Parser Tests</Title>
+		<meta name="description" content="Your basic average HTML parser tests.">
+		<meta NAME="keywords" content="HTML,parser,tests,basic">
+		<meta name="robots" CONTENT="noindex, nofollow">
+	</head>
+	<body>
+		Just some text to <b>extract</b> properly.
+		<p>Lorem Ipsum bla Bla bla.</p>
+		<span style="display:none;">How did this text get here?</span>
+		<ul> Some links:
+			<li><a href="http://riweb.tibeica.com/tests/l1_absolute">OK1 link_absolute</a></li>
+			<li><a href="http://riweb.tibeica.com/tests/l1_absolute?id=1">OK2 link_absolute_parameters</a></li>
+			<li><a href="http://riweb.tibeica.com/tests/l1_basic?id=1">OK3 link_absolute same_parameters</a></li>
+			<li><a href="l1_relative1">OK4 link_relative_1</a></li>
+			<li><a href="./l1_relative2">OK5 link_relative_2</a></li>
+			<li><a href="../tests/l1_relative2">OK6 link_relative_3</a></li>
+			<li><a href="l1_relative1?param">OK7 link_relative_parameters</a></li>
+		</ul>
+		<ul> Some internal links:
+			<li><a href="http://riweb.tibeica.com/tests/l1_basic">NOK1 link_internal_absolute</a></li>
+			<li><a href="http://riweb.tibeica.com/tests/l1_basic#something">NOK2 link_internal_absolute_with bookmark</a></li>
+			<li><a href="#">NOK3 link_internal nothing</a></li>
+			<li><a href="./l1_basic">NOK4 link_internal_relative</a></li>
+			<li><a href="../tests/l1_basic">NOK5 link_internal_relative_harder</a></li>
+		</ul>
+		<ul> Other tests:
+			<li id="jsgena"></li>
+		</ul>
+		<!-- tag soup is always fun, dar hai sa nu va chinui :) -->
+	</body>
+<script>
+document.getElementById("jsgena").innerHTML = '<a href="./l1_jsgenerated">OK8 link_jsgenerated</a>';
+</script>
+</html>

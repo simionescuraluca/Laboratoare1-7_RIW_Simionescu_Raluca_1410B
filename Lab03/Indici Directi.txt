@@ -1,0 +1,3 @@
+{d1.txt={ana=1, mere=1}}
+{d2.txt={ana=1, pere=2}}
+{d514.txt={mere=1, pere=4}}
